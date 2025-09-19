@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Carros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Inputs escondidos que controlam as abas -->
+    <input type="radio" name="tab" id="home" checked>
+    <input type="radio" name="tab" id="sobre">
+    <input type="radio" name="tab" id="servicos">
+    <input type="radio" name="tab" id="galeria">
+    <input type="radio" name="tab" id="contato">
+
+    <!-- Barra de navegação -->
+    <ul class="nav nav-pills nav-fill fixed-top navbar-custom shadow-lg">
+        <li class="nav-item">
+            <label for="home" class="nav-link active tooltip">
+                <i class="bi bi-house-door-fill"></i>
+                <span class="tooltiptext">Início</span>
+            </label>
+        </li>
+        <li class="nav-item">
+            <label for="sobre" class="nav-link tooltip">
+                <i class="bi bi-info-circle-fill"></i>
+                <span class="tooltiptext">Sobre</span>
+            </label>
+        </li>
+        <li class="nav-item">
+            <label for="servicos" class="nav-link tooltip">
+                <i class="bi bi-tools"></i>
+                <span class="tooltiptext">Serviços</span>
+            </label>
+        </li>
+        <li class="nav-item">
+            <label for="galeria" class="nav-link tooltip">
+                <i class="bi bi-camera-fill"></i>
+                <span class="tooltiptext">Galeria</span>
+            </label>
+        </li>
+        <li class="nav-item">
+            <label for="contato" class="nav-link tooltip">
+                <i class="bi bi-envelope-fill"></i>
+                <span class="tooltiptext">Contato</span>
+            </label>
+        </li>
+    </ul>
+
+    <!-- Conteúdo das abas -->
+    <div class="tab-content">
+        <div class="tab home">
+            <div class="spinner"></div>
+            <div class="tab-content-inner">
+                <h1 class="text-light">🚗 Bem-vindo à Galeria de Carros</h1>
+                <p class="text-light">Explore os carros mais icônicos do mundo!</p>
+            </div>
+        </div>
+
+        <div class="tab sobre">
+            <div class="spinner"></div>
+            <div class="tab-content-inner">
+                <p class="text-light">Nossa galeria foi criada para apaixonados por carros, trazendo os modelos mais
+                    raros e potentes.</p>
+            </div>
+        </div>
+
+        <div class="tab servicos">
+            <div class="spinner"></div>
+            <div class="tab-content-inner glass-card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent text-light">🔧 Restauração de carros clássicos</li>
+                    <li class="list-group-item bg-transparent text-light">🖼️ Exposição de carros de luxo</li>
+                    <li class="list-group-item bg-transparent text-light">🏎️ Eventos e encontros exclusivos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab galeria">
+            <div class="spinner"></div>
+            <div class="tab-content-inner gallery-grid">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1542365885-b7be3d4b83e1" class="gallery-img">
+            </div>
+        </div>
+
+        <div class="tab contato">
+            <div class="spinner"></div>
+            <div class="tab-content-inner glass-card p-3">
+                <form>
+                    <input type="text" class="form-control mb-2" placeholder="Seu nome">
+                    <input type="email" class="form-control mb-2" placeholder="Seu email">
+                    <textarea class="form-control mb-2" placeholder="Sua mensagem"></textarea>
+                    <button class="btn btn-light w-100 fw-bold">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de confirmação -->
+    <div class="toast">Conteúdo carregado com sucesso ✅</div>
+</body>
+
+</html>
