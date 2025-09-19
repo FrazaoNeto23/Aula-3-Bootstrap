@@ -4,108 +4,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Carros</title>
+    <title>Galeria de Carros Mobile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Inputs escondidos que controlam as abas -->
-    <input type="radio" name="tab" id="home" checked>
-    <input type="radio" name="tab" id="sobre">
-    <input type="radio" name="tab" id="servicos">
-    <input type="radio" name="tab" id="galeria">
-    <input type="radio" name="tab" id="contato">
-
-    <!-- Barra de navegação -->
-    <ul class="nav nav-pills nav-fill fixed-top navbar-custom shadow-lg">
-        <li class="nav-item">
-            <label for="home" class="nav-link active tooltip">
-                <i class="bi bi-house-door-fill"></i>
-                <span class="tooltiptext">Início</span>
-            </label>
-        </li>
-        <li class="nav-item">
-            <label for="sobre" class="nav-link tooltip">
-                <i class="bi bi-info-circle-fill"></i>
-                <span class="tooltiptext">Sobre</span>
-            </label>
-        </li>
-        <li class="nav-item">
-            <label for="servicos" class="nav-link tooltip">
-                <i class="bi bi-tools"></i>
-                <span class="tooltiptext">Serviços</span>
-            </label>
-        </li>
-        <li class="nav-item">
-            <label for="galeria" class="nav-link tooltip">
-                <i class="bi bi-camera-fill"></i>
-                <span class="tooltiptext">Galeria</span>
-            </label>
-        </li>
-        <li class="nav-item">
-            <label for="contato" class="nav-link tooltip">
-                <i class="bi bi-envelope-fill"></i>
-                <span class="tooltiptext">Contato</span>
-            </label>
-        </li>
-    </ul>
-
-    <!-- Conteúdo das abas -->
-    <div class="tab-content">
-        <div class="tab home">
-            <div class="spinner"></div>
-            <div class="tab-content-inner">
-                <h1 class="text-light">🚗 Bem-vindo à Galeria de Carros</h1>
-                <p class="text-light">Explore os carros mais icônicos do mundo!</p>
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="main-container">
+        <div id="home" class="tab-content active">
+            <div class="spinner-custom"></div>
+            <div class="loading-text">Carregando início...</div>
+            <div class="content-card">
+                <h1>🚗 Galeria Mobile</h1>
+                <p>Bem-vindo à nossa galeria de carros otimizada para dispositivos móveis!</p>
+                <p>Explore, descubra e se apaixone pelos automóveis mais incríveis do mundo.</p>
             </div>
         </div>
-
-        <div class="tab sobre">
-            <div class="spinner"></div>
-            <div class="tab-content-inner">
-                <p class="text-light">Nossa galeria foi criada para apaixonados por carros, trazendo os modelos mais
-                    raros e potentes.</p>
+        <div id="sobre" class="tab-content">
+            <div class="spinner-custom"></div>
+            <div class="loading-text">Carregando sobre...</div>
+            <div class="content-card">
+                <h2>📱 Sobre Nós</h2>
+                <p>Somos especialistas em experiências mobile para entusiastas automotivos.</p>
+                <p>Nossa plataforma foi desenvolvida especialmente para oferecer a melhor navegação em smartphones.</p>
+                <p>Desde 2020, conectamos pessoas apaixonadas por carros em todo o Brasil.</p>
             </div>
         </div>
-
-        <div class="tab servicos">
-            <div class="spinner"></div>
-            <div class="tab-content-inner glass-card">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent text-light">🔧 Restauração de carros clássicos</li>
-                    <li class="list-group-item bg-transparent text-light">🖼️ Exposição de carros de luxo</li>
-                    <li class="list-group-item bg-transparent text-light">🏎️ Eventos e encontros exclusivos</li>
-                </ul>
+        <div id="servicos" class="tab-content">
+            <div class="spinner-custom"></div>
+            <div class="loading-text">Carregando serviços...</div>
+            <div class="content-card">
+                <h2>⚙️ Serviços</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <strong>🔧 Consultoria Mobile</strong><br>
+                        <small>Avaliação de veículos via smartphone</small>
+                    </div>
+                    <div class="service-item">
+                        <strong>📸 Galeria Interativa</strong><br>
+                        <small>Visualização otimizada para touch</small>
+                    </div>
+                    <div class="service-item">
+                        <strong>🤝 Networking</strong><br>
+                        <small>Conecte-se com outros entusiastas</small>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="tab galeria">
-            <div class="spinner"></div>
-            <div class="tab-content-inner gallery-grid">
-                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1542365885-b7be3d4b83e1" class="gallery-img">
+        <div id="galeria" class="tab-content">
+            <div class="spinner-custom"></div>
+            <div class="loading-text">Carregando galeria...</div>
+            <div class="content-card">
+                <h2>📷 Galeria</h2>
+                <p>Coleção mobile-friendly dos melhores carros</p>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=200&h=150&fit=crop"
+                        class="gallery-img" alt="Carro 1">
+                    <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=200&h=150&fit=crop"
+                        class="gallery-img" alt="Carro 2">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=150&fit=crop"
+                        class="gallery-img" alt="Carro 3">
+                    <img src="https://images.unsplash.com/photo-1542365885-b7be3d4b83e1?w=200&h=150&fit=crop"
+                        class="gallery-img" alt="Carro 4">
+                </div>
             </div>
         </div>
-
-        <div class="tab contato">
-            <div class="spinner"></div>
-            <div class="tab-content-inner glass-card p-3">
-                <form>
-                    <input type="text" class="form-control mb-2" placeholder="Seu nome">
-                    <input type="email" class="form-control mb-2" placeholder="Seu email">
-                    <textarea class="form-control mb-2" placeholder="Sua mensagem"></textarea>
-                    <button class="btn btn-light w-100 fw-bold">Enviar</button>
+        <div id="contato" class="tab-content">
+            <div class="spinner-custom"></div>
+            <div class="loading-text">Carregando contato...</div>
+            <div class="content-card">
+                <h2>📧 Contato</h2>
+                <p>Entre em contato conosco</p>
+                <form onsubmit="return false;">
+                    <input type="text" class="form-control" placeholder="Nome" required>
+                    <input type="email" class="form-control" placeholder="E-mail" required>
+                    <textarea class="form-control" rows="3" placeholder="Mensagem"></textarea>
+                    <button type="submit" class="btn-send">Enviar Mensagem</button>
                 </form>
             </div>
         </div>
     </div>
+    <nav class="navbar-mobile">
+        <div class="nav-pills-mobile">
+            <button class="nav-pill active tooltip-custom" data-tooltip="Página Inicial" onclick="changeTab('home')">
+                <i class="bi bi-house-door-fill"></i>
+                <small>Início</small>
+            </button>
+            <button class="nav-pill tooltip-custom" data-tooltip="Sobre Nós" onclick="changeTab('sobre')">
+                <i class="bi bi-info-circle-fill"></i>
+                <small>Sobre</small>
+            </button>
+            <button class="nav-pill tooltip-custom" data-tooltip="Nossos Serviços" onclick="changeTab('servicos')">
+                <i class="bi bi-tools"></i>
+                <small>Serviços</small>
+            </button>
+            <button class="nav-pill tooltip-custom" data-tooltip="Galeria de Fotos" onclick="changeTab('galeria')">
+                <i class="bi bi-camera-fill"></i>
+                <small>Galeria</small>
+            </button>
+            <button class="nav-pill tooltip-custom" data-tooltip="Fale Conosco" onclick="changeTab('contato')">
+                <i class="bi bi-envelope-fill"></i>
+                <small>Contato</small>
+            </button>
+        </div>
+    </nav>
 
-    <!-- Toast de confirmação -->
-    <div class="toast">Conteúdo carregado com sucesso ✅</div>
+    <script>
+        let currentTab = 'home';
+        let toastCounter = 1;
+        function changeTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-pill').forEach(pill => {
+                pill.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            event.target.closest('.nav-pill').classList.add('active');
+            const targetTab = document.getElementById(tabName);
+            const spinner = targetTab.querySelector('.spinner-custom');
+            const loadingText = targetTab.querySelector('.loading-text');
+            const contentCard = targetTab.querySelector('.content-card');
+            spinner.style.display = 'block';
+            loadingText.style.display = 'block';
+            contentCard.classList.remove('show');
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                loadingText.style.display = 'none';
+                contentCard.classList.add('show');
+            }, 1500);
+
+            currentTab = tabName;
+            showToast(`📱 ${getTabDisplayName(tabName)} carregado com sucesso!`, 'success');
+        }
+        function getTabDisplayName(tabName) {
+            const names = {
+                'home': 'Início',
+                'sobre': 'Sobre',
+                'servicos': 'Serviços',
+                'galeria': 'Galeria',
+                'contato': 'Contato'
+            };
+            return names[tabName] || tabName;
+        }
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'custom-toast';
+            toast.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span>${message}</span>
+                    <button style="background: none; border: none; color: #ff4757; font-size: 16px; cursor: pointer;" onclick="this.parentElement.parentElement.remove()">×</button>
+                </div>
+            `;
+            toastContainer.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            setTimeout(() => {
+                toast.classList.add('hide');
+                setTimeout(() => {
+                    if (toast.parentElement) {
+                        toast.remove();
+                    }
+                }, 400);
+            }, 4000);
+        }
+        function showTimeToast() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('pt-BR', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            const dateString = now.toLocaleDateString('pt-BR');
+
+            showToast(`🕐 ${timeString} - ${dateString}`, 'time');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(() => {
+                const homeSpinner = document.querySelector('#home .spinner-custom');
+                const homeLoading = document.querySelector('#home .loading-text');
+                const homeCard = document.querySelector('#home .content-card');
+
+                homeSpinner.style.display = 'none';
+                homeLoading.style.display = 'none';
+                homeCard.classList.add('show');
+            }, 2000);
+            setTimeout(() => {
+                showToast('🚗 Bem-vindo à Galeria Mobile! Navegue pelas abas abaixo.', 'welcome');
+            }, 2500);
+            setInterval(showTimeToast, 10000);
+            setTimeout(showTimeToast, 5000);
+        });
+        document.addEventListener('touchmove', function (e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        console.log('🚗 Galeria Mobile carregada com sucesso!');
+        console.log('📱 Site otimizado para dispositivos móveis');
+        console.log('⏰ Toast com hora atual será exibido a cada 10 segundos');
+    </script>
 </body>
 
 </html>
